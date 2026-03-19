@@ -23,14 +23,14 @@ public class ActN2MaiaRoiz{
             int num2 = teclado.nextInt();
 
         
-       // if (num1 == num2) {
+        if (num1 == num2) {
             System.out.println("Los números " + num1 + " y " + num2 + " son IGUALES.");
         } else {
             System.out.println("Los números " + num1 + " y " + num2 + " son DIFERENTES.");
         }
 
         
-        //teclado.close();
+        teclado.close();
         */
        /** 
        Scanner teclado = new Scanner(System.in);
@@ -101,45 +101,45 @@ public class ActN2MaiaRoiz{
         teclado.close();*/
 
    
-       //  Scanner teclado = new Scanner(System.in);
+         /**Scanner teclado = new Scanner(System.in);
 
 
-        //System.out.print("Introduce el primer número: ");
+        System.out.print("Introduce el primer número: ");
 
-       // int num1 = teclado.nextInt();
-
-
-     //   System.out.print("Introduce el segundo número: ");
-
-       // int num2 = teclado.nextInt();
+        int num1 = teclado.nextInt();
 
 
-       // System.out.print("Introduce el tercer número: ");
+        System.out.print("Introduce el segundo número: ");
 
-       // int num3 = teclado.nextInt();
-
-
-      //  int mayor = num1;
+        int num2 = teclado.nextInt();
 
 
-       // if (num2 > mayor) {
+        System.out.print("Introduce el tercer número: ");
 
-       //     mayor = num2;
-
-      //  }
+        int num3 = teclado.nextInt();
 
 
-     //   if (num3 > mayor) {
-
-         //   mayor = num3;
-
-      //  }
+       int mayor = num1;
 
 
-     //   System.out.println("El número mayor es: " + mayor);
+        if (num2 > mayor) {
+
+            mayor = num2;
+
+        }
 
 
-       // teclado.close();
+        if (num3 > mayor) {
+
+            mayor = num3;
+
+        }
+
+
+        System.out.println("El número mayor es: " + mayor);
+
+
+        teclado.close();
        
        Scanner teclado = new Scanner(System.in);
 
@@ -176,7 +176,7 @@ public class ActN2MaiaRoiz{
         }
 
 
-        teclado.close();
+        teclado.close();*/          
 
    
 
