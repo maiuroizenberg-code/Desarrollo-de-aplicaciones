@@ -127,6 +127,7 @@ public class ActN3MaiaRoiz {
        }*/
         
   
+        /**7-*/
         Scanner teclado = new Scanner(System.in);
 
         System.out.print("¿Quiere una pizza vegetariana? (si/no): ");
@@ -174,6 +175,7 @@ public class ActN3MaiaRoiz {
             System.out.println("- Tomate");
             System.out.println("- Mozzarella");
             System.out.println("- " + ingrediente);
+            teclado.close();
         }
     
  
