@@ -215,21 +215,21 @@ public class ActN4MaiaRoiz {
         int A, B;
 
         
-        System.out.print("Ingrese el numero A: ");
-        A = sc.nextInt();
+        System.out.println("Ingrese el numero A: ");
+        A = teclado.nextInt();
 
-        System.out.print("Ingrese el numero B: ");
-        B = sc.nextInt();
+        System.out.println("Ingrese el numero B: ");
+        B = teclado.nextInt();
 
         
         while (A >= B) {
             System.out.println("Error: A debe ser menor que B. Intente nuevamente.");
 
-            System.out.print("Ingrese el número A: ");
-            A = sc.nextInt();
+            System.out.println("Ingrese el número A: ");
+            A = teclado.nextInt();
 
-            System.out.print("Ingrese el número B: ");
-            B = sc.nextInt();
+            System.out.println("Ingrese el número B: ");
+            B = teclado.nextInt();
         }
 
         
@@ -245,17 +245,17 @@ public class ActN4MaiaRoiz {
          int N = 0; 
          int M = 0;
 
-        System.out.print("Ingrese N: ");
+        System.out.println("Ingrese N: ");
         N = sc.nextInt();
-        System.out.print("Ingrese M: ");
+        System.out.println("Ingrese M: ");
         M = sc.nextInt();
 
         while (N <= 0 || M <= 0 || N >= M) {
             System.out.println("Error: valores inválidos, N debe ser menor.");
 
-            System.out.print("Ingrese N: ");
+            System.out.println("Ingrese N: ");
             N = sc.nextInt();
-            System.out.print("Ingrese M: ");
+            System.out.println("Ingrese M: ");
             M = sc.nextInt();
         }
 
@@ -273,9 +273,9 @@ public class ActN4MaiaRoiz {
         int N, M;
 
         do {
-            System.out.print("Ingrese N: ");
+            System.out.println("Ingrese N: ");
             N = sc.nextInt();
-            System.out.print("Ingrese M: ");
+            System.out.println("Ingrese M: ");
             M = sc.nextInt();
 
             if (N <= 0 || M <= 0 || N >= M) {
@@ -298,17 +298,17 @@ public class ActN4MaiaRoiz {
         Scanner teclado = new Scanner(System.in);
         int N, M;
 
-        System.out.print("Ingrese N: ");
+        System.out.println("Ingrese N: ");
         N = sc.nextInt();
-        System.out.print("Ingrese M: ");
+        System.out.println("Ingrese M: ");
         M = sc.nextInt();
 
         while (N <= 0 || M <= 0 || N >= M) {
             System.out.println("Error: valores inválidos.");
 
-            System.out.print("Ingrese N: ");
+            System.out.println("Ingrese N: ");
             N = sc.nextInt();
-            System.out.print("Ingrese M: ");
+            System.out.println("Ingrese M: ");
             M = sc.nextInt();
         }
 
@@ -351,6 +351,7 @@ public class ActN4MaiaRoiz {
         }
         */
         
+        /**Ejercicio 7 for 
         Scanner teclado = new Scanner(System.in);
         double millas, km;
 
@@ -363,33 +364,12 @@ public class ActN4MaiaRoiz {
             }
 
             km = millas * 1.6093;
-            System.out.printf("Kilómetros: %.2f\n", km);
-        }
+            System.out.printf("Kilometros: %.2f\n", km);
+        }*/
 
-
-        
-        
-        
-        
-        
-       
-       
-            
-        
-        
-
-    
-    
-    
-    
     }
     
-    
-       
-    
-    
-    
-    }
+}
     
     
 
