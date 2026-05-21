@@ -277,9 +277,7 @@ public class ActN5 {
          teclado .close();*/
         
         //Ejercicio 9 
-        
-
-    public static void main(String[] args) {
+        /**public static void main(String[] args) {
         int[] array = generarArray(1, 10, 5);
 
         for (int num : array) {
@@ -310,11 +308,11 @@ public class ActN5 {
                 return true;
             }
         }
-        return false;
+        return false;*/
         
-    }
+    
 
 
-    }
+    
     
 }
