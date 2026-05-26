@@ -3534,7 +3534,7 @@ public class ActividadN5MaiaRoiz {
     }
 }*/
 //Ejercicio 1 Método de ordenación MergeSort
-        public static void mergeSort(
+        /**public static void mergeSort(
                 int[] vector, int izquierda, int derecha) {
         if (izquierda < derecha) {
             int medio = (izquierda + derecha) / 2;
@@ -3621,7 +3621,174 @@ public class ActividadN5MaiaRoiz {
 
         teclado.close();
     }
+}*/
+        //Ejercicio 2 
+        /**public static void mergeSort(int[] vector, int izquierda, int derecha) {
+        if (izquierda < derecha) {
+            int medio = (izquierda + derecha) / 2;
+
+            mergeSort(vector, izquierda, medio);
+            mergeSort(vector, medio + 1, derecha);
+
+            merge(vector, izquierda, medio, derecha);
+        }
+    }
+
+    public static void merge(int[] vector, int izquierda, int medio, int derecha) {
+        int[] aux = new int[vector.length];
+
+        for (int i = izquierda; i <= derecha; i++) {
+            aux[i] = vector[i];
+        }
+
+        int i = izquierda;
+        int j = medio + 1;
+        int k = izquierda;
+
+        while (i <= medio && j <= derecha) {
+            if (aux[i] <= aux[j]) {
+                vector[k] = aux[i];
+                i++;
+            } else {
+                vector[k] = aux[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i <= medio) {
+            vector[k] = aux[i];
+            i++;
+            k++;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int[] vector = new int[10];
+        Scanner teclado = new Scanner(System.in);
+
+        int suma = 0;
+        int contador = 0;
+
+        for (int i = 0; i < 10; i++) {
+            System.out.print("Ingrese un número: ");
+            vector[i] = teclado.nextInt();
+        }
+
+        mergeSort(vector, 0, vector.length - 1);
+
+        System.out.println("Vector ordenado:");
+        for (int num : vector) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < 10; i++) {
+            if (i % 2 == 0) {
+                suma += vector[i];
+                contador++;
+            }
+        }
+
+        if (contador > 0) {
+            double media = (double) suma / contador;
+            System.out.println("Media de posiciones pares: " + media);
+        }
+
+        teclado.close();
+    }
+}*/
+         //Ejercicio 3 
+
+    public static void mergeSort(double[] vector, int izquierda, int derecha) {
+        if (izquierda < derecha) {
+            int medio = (izquierda + derecha) / 2;
+
+            mergeSort(vector, izquierda, medio);
+            mergeSort(vector, medio + 1, derecha);
+
+            merge(vector, izquierda, medio, derecha);
+        }
+    }
+
+    public static void merge(double[] vector, int izquierda, int medio, int derecha) {
+        double[] aux = new double[vector.length];
+
+        for (int i = izquierda; i <= derecha; i++) {
+            aux[i] = vector[i];
+        }
+
+        int i = izquierda;
+        int j = medio + 1;
+        int k = izquierda;
+
+        while (i <= medio && j <= derecha) {
+            if (aux[i] <= aux[j]) {
+                vector[k] = aux[i];
+                i++;
+            } else {
+                vector[k] = aux[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i <= medio) {
+            vector[k] = aux[i];
+            i++;
+            k++;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Ingrese número de alumnos: ");
+        int n = teclado.nextInt();
+
+        double[] notas = new double[n];
+
+        for (int i = 0; i < notas.length; i++) {
+            System.out.print("Nota del alumno " + (i + 1) + ": ");
+            notas[i] = teclado.nextDouble();
+        }
+
+        double suma = 0;
+
+        for (int i = 0; i < notas.length; i++) {
+            suma += notas[i];
+        }
+
+        double media = suma / notas.length;
+
+        mergeSort(notas, 0, notas.length - 1);
+
+        System.out.println("Notas ordenadas:");
+        for (double nota : notas) {
+            System.out.print(nota + " ");
+        }
+
+        System.out.println();
+        System.out.println("Nota media: " + media);
+
+        System.out.println("Alumnos con nota superior a la media:");
+
+        for (int i = 0; i < notas.length; i++) {
+            if (notas[i] > media) {
+                System.out.println(notas[i]);
+            }
+        }
+
+        teclado.close();
+    }
 }
+
+
+
+
 
 
 
