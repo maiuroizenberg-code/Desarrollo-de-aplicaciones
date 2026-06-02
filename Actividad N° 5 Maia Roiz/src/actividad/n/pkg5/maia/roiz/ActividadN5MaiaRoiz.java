@@ -3534,6 +3534,7 @@ public class ActividadN5MaiaRoiz {
     }
 }*/
 //Ejercicio 1 Método de ordenación MergeSort
+
         /**public static void mergeSort(
                 int[] vector, int izquierda, int derecha) {
         if (izquierda < derecha) {
@@ -3701,8 +3702,8 @@ public class ActividadN5MaiaRoiz {
     }
 }*/
          //Ejercicio 3 
-
-    public static void mergeSort(double[] vector, int izquierda, int derecha) {
+          
+         /**public static void mergeSort(double[] vector, int izquierda, int derecha) {
         if (izquierda < derecha) {
             int medio = (izquierda + derecha) / 2;
 
@@ -3784,7 +3785,495 @@ public class ActividadN5MaiaRoiz {
 
         teclado.close();
     }
-}
+}*/
+        //Ejercicio 4
+        /**public static void mergeSort(int[] vector, int izquierda, int derecha) {
+        if (izquierda < derecha) {
+            int medio = (izquierda + derecha) / 2;
+
+            mergeSort(vector, izquierda, medio);
+            mergeSort(vector, medio + 1, derecha);
+
+            merge(vector, izquierda, medio, derecha);
+        }
+    }
+
+    public static void merge(int[] vector, int izquierda, int medio, int derecha) {
+        int[] aux = new int[vector.length];
+
+        for (int i = izquierda; i <= derecha; i++) {
+            aux[i] = vector[i];
+        }
+
+        int i = izquierda;
+        int j = medio + 1;
+        int k = izquierda;
+
+        while (i <= medio && j <= derecha) {
+            if (aux[i] <= aux[j]) {
+                vector[k] = aux[i];
+                i++;
+            } else {
+                vector[k] = aux[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i <= medio) {
+            vector[k] = aux[i];
+            i++;
+            k++;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner teclado = new Scanner(System.in);
+
+        int[] pares = new int[20];
+        int contador = 0;
+
+        while (contador < 20) {
+            System.out.print("Ingresa un número: ");
+            int num = teclado.nextInt();
+
+            if (num % 2 == 0) {
+                pares[contador] = num;
+                contador++;
+            }
+        }
+
+        mergeSort(pares, 0, pares.length - 1);
+
+        System.out.println("Números pares ordenados:");
+
+        for (int i = 0; i < 20; i++) {
+            System.out.println(pares[i]);
+        }
+
+        teclado.close();
+    }
+}*/
+        //Ejercicio 5 
+        /**public static void mergeSort(int[] vector, int izquierda, int derecha) {
+        if (izquierda < derecha) {
+            int medio = (izquierda + derecha) / 2;
+
+            mergeSort(vector, izquierda, medio);
+            mergeSort(vector, medio + 1, derecha);
+
+            merge(vector, izquierda, medio, derecha);
+        }
+    }
+
+    public static void merge(int[] vector, int izquierda, int medio, int derecha) {
+        int[] aux = new int[vector.length];
+
+        for (int i = izquierda; i <= derecha; i++) {
+            aux[i] = vector[i];
+        }
+
+        int i = izquierda;
+        int j = medio + 1;
+        int k = izquierda;
+
+        while (i <= medio && j <= derecha) {
+            if (aux[i] <= aux[j]) {
+                vector[k] = aux[i];
+                i++;
+            } else {
+                vector[k] = aux[j];
+                j++;
+            }
+            k++;
+        }
+
+        while (i <= medio) {
+            vector[k] = aux[i];
+            i++;
+            k++;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        int[] vector = new int[10];
+        Scanner teclado = new Scanner(System.in);
+
+        int positivos = 0;
+        int negativos = 0;
+        int ceros = 0;
+
+        System.out.println("Introduce 10 números enteros:");
+
+        for (int i = 0; i < vector.length; i++) {
+            vector[i] = teclado.nextInt();
+        }
+
+        mergeSort(vector, 0, vector.length - 1);
+
+        System.out.println("Vector ordenado:");
+
+        for (int num : vector) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < vector.length; i++) {
+            if (vector[i] > 0) {
+                positivos++;
+            } else if (vector[i] < 0) {
+                negativos++;
+            } else {
+                ceros++;
+            }
+        }
+
+        System.out.println("Cantidad de positivos: " + positivos);
+        System.out.println("Cantidad de negativos: " + negativos);
+        System.out.println("Cantidad de ceros: " + ceros);
+
+        teclado.close();
+    }
+}*/
+        //Ejercicio 6 
+
+       /**public static void mergeSort(int[] vector, int izquierda, int derecha) {
+
+       if (izquierda < derecha) {
+
+           int medio = (izquierda + derecha) / 2;
+
+           mergeSort(vector, izquierda, medio);
+           mergeSort(vector, medio + 1, derecha);
+
+           merge(vector, izquierda, medio, derecha);
+       }
+   }
+
+   public static void merge(int[] vector, int izquierda, int medio, int derecha) {
+
+       int[] auxiliar = new int[vector.length];
+
+       for (int i = izquierda; i <= derecha; i++) {
+           auxiliar[i] = vector[i];
+       }
+
+       int i = izquierda;
+       int j = medio + 1;
+       int k = izquierda;
+
+       while (i <= medio && j <= derecha) {
+
+           if (auxiliar[i] <= auxiliar[j]) {
+               vector[k] = auxiliar[i];
+               i++;
+           } else {
+               vector[k] = auxiliar[j];
+               j++;
+           }
+
+           k++;
+       }
+
+       while (i <= medio) {
+           vector[k] = auxiliar[i];
+           i++;
+           k++;
+       }
+   }
+
+   public static void main(String[] args) {
+
+       int[] vector = new int[10];
+
+       Scanner teclado = new Scanner(System.in);
+
+       int sumaPositivos = 0;
+       int sumaNegativos = 0;
+       int countPositivos = 0;
+       int countNegativos = 0;
+
+       System.out.println("Introduce 10 números enteros:");
+
+       for (int i = 0; i < vector.length; i++) {
+           vector[i] = teclado.nextInt();
+       }
+
+       mergeSort(vector, 0, vector.length - 1);
+
+       System.out.println("Vector ordenado:");
+
+       for (int num : vector) {
+           System.out.print(num + " ");
+       }
+
+       System.out.println();
+
+       for (int i = 0; i < vector.length; i++) {
+
+           if (vector[i] > 0) {
+               sumaPositivos += vector[i];
+               countPositivos++;
+
+           } else if (vector[i] < 0) {
+               sumaNegativos += vector[i];
+               countNegativos++;
+           }
+       }
+
+       if (countPositivos > 0) {
+
+           double mediaPositivos =
+                   (double) sumaPositivos / countPositivos;
+
+           System.out.println(
+                   "Media de positivos: " + mediaPositivos);
+
+       } else {
+
+           System.out.println("No hay números positivos.");
+       }
+
+       if (countNegativos > 0) {
+
+           double mediaNegativos =
+                   (double) sumaNegativos / countNegativos;
+
+           System.out.println(
+                   "Media de negativos: " + mediaNegativos);
+
+       } else {
+
+           System.out.println("No hay números negativos.");
+       }
+
+       teclado.close();
+   }
+}*/
+       //Ejercicio 8 
+       /**public static void mergeSort(double[] sueldos,
+            String[] nombres,
+            int izquierda,
+            int derecha) {
+
+       if (izquierda < derecha) {
+
+           int medio = (izquierda + derecha) / 2;
+
+           mergeSort(sueldos, nombres, izquierda, medio);
+           mergeSort(sueldos, nombres, medio + 1, derecha);
+
+           merge(sueldos, nombres, izquierda, medio, derecha);
+       }
+   }
+
+   public static void merge(double[] sueldos,
+                            String[] nombres,
+                            int izquierda,
+                            int medio,
+                            int derecha) {
+
+       double[] auxSueldos = new double[sueldos.length];
+       String[] auxNombres = new String[nombres.length];
+
+       for (int i = izquierda; i <= derecha; i++) {
+
+           auxSueldos[i] = sueldos[i];
+           auxNombres[i] = nombres[i];
+       }
+
+       int i = izquierda;
+       int j = medio + 1;
+       int k = izquierda;
+
+       while (i <= medio && j <= derecha) {
+
+           if (auxSueldos[i] <= auxSueldos[j]) {
+
+               sueldos[k] = auxSueldos[i];
+               nombres[k] = auxNombres[i];
+               i++;
+
+           } else {
+
+               sueldos[k] = auxSueldos[j];
+               nombres[k] = auxNombres[j];
+               j++;
+           }
+
+           k++;
+       }
+
+       while (i <= medio) {
+
+           sueldos[k] = auxSueldos[i];
+           nombres[k] = auxNombres[i];
+
+           i++;
+           k++;
+       }
+   }
+
+   public static void main(String[] args) {
+
+       String[] nombres = new String[20];
+       double[] sueldos = new double[20];
+
+       Scanner teclado = new Scanner(System.in);
+
+       for (int i = 0; i < 20; i++) {
+
+           System.out.println("Empleado " + (i + 1));
+
+           System.out.print("Nombre: ");
+           nombres[i] = teclado.nextLine();
+
+           System.out.print("Sueldo: ");
+           sueldos[i] = teclado.nextDouble();
+
+           teclado.nextLine();
+       }
+
+       mergeSort(sueldos, nombres, 0, sueldos.length - 1);
+
+       System.out.println("\nEmpleados ordenados por sueldo:");
+
+       for (int i = 0; i < sueldos.length; i++) {
+
+           System.out.println(
+                   nombres[i] + " - $" + sueldos[i]);
+       }
+
+       System.out.println("\nEmpleado con mayor sueldo:");
+
+       System.out.println(
+               nombres[sueldos.length - 1]);
+
+       System.out.println(
+               sueldos[sueldos.length - 1]);
+
+       teclado.close();
+   }
+}*/
+ 
+//Ejercicio 9 
+    /**public static void mergeSort(int[] vector,
+      int izquierda,
+      int derecha) {
+
+      if (izquierda < derecha) {
+
+     int medio = (izquierda + derecha) / 2;
+
+     mergeSort(vector, izquierda, medio);
+     mergeSort(vector, medio + 1, derecha);
+
+     merge(vector, izquierda, medio, derecha);
+          }
+     }
+
+    public static void merge(int[] vector,
+    int izquierda,
+    int medio,
+    int derecha) {
+
+    int[] auxiliar = new int[vector.length];
+
+    for (int i = izquierda; i <= derecha; i++) {
+    auxiliar[i] = vector[i];
+    }
+
+    int i = izquierda;
+    int j = medio + 1;
+    int k = izquierda;
+
+    while (i <= medio && j <= derecha) {
+
+    if (auxiliar[i] <= auxiliar[j]) {
+
+    vector[k] = auxiliar[i];
+    i++;
+
+     } else {
+
+    vector[k] = auxiliar[j];
+        j++;
+      }
+
+        k++;
+      }
+
+    while (i <= medio) {
+
+    vector[k] = auxiliar[i];
+    i++;
+    k++;
+        }
+    }
+
+    public static void main(String[] args) {
+
+    int[] array = generarArray(1, 10, 5);
+
+    mergeSort(array, 0, array.length - 1);
+
+    System.out.println("Array ordenado:");
+
+    for (int num : array) {
+   System.out.print(num + " ");
+       }
+    }
+
+    public static int[] generarArray(int desde,
+    int hasta,
+    int tamaño) {
+
+    int[] array = new int[tamaño];
+
+    Random random = new Random();
+
+    for (int i = 0; i < tamaño; i++) {
+
+    int numero;
+
+    do {
+
+    numero =
+    random.nextInt(hasta - desde + 1)
+    + desde;
+
+    } while (
+    comprobarSiContiene(array, i, numero)
+    );
+
+    array[i] = numero;
+    }
+
+    return array;
+    }
+
+    public static boolean comprobarSiContiene(
+    int[] array,
+    int posicion,
+    int numero) {
+
+    for (int i = 0; i < posicion; i++) {
+
+    if (array[i] == numero) {
+      return true;
+       }
+    }
+
+       return false;
+    }
+} 
+*/
+
+
+
 
 
 
