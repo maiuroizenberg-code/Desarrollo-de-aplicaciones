@@ -139,7 +139,7 @@ public class ActividadN7 {
 
         System.out.println("Nombres\tNumeros");
 
-        for (int fila = 0; fila < matriz.length; fila++) {  M
+        for (int fila = 0; fila < matriz.length; fila++) {
             for (int col = 0; col < matriz[fila].length - 1; col += 2) {
 
                 String nombre = matriz[fila][col];
